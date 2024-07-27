@@ -1,0 +1,172 @@
+/* @font-face {
+    font-family: vibes;
+    src: url('./font/GreatVibes-Regular.ttf');
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    color: white;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 1;
+}
+
+ul {
+    display: flex;
+    justify-content: end;
+    line-height: 80px;
+    margin-right: 80px;
+    gap: 50px;
+    width: 60%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+.logo {
+    width: 40%;
+}
+
+hr {
+    color: red;
+}
+
+.logo h1 a {
+    line-height: 80px;
+    margin-left: 80px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    animation: moveup;
+
+}
+
+.bg-img img {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.head {
+    color: white;
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 8%;
+    font-size: 70px;
+    animation: moveup;
+
+}
+
+.para {
+    color: white;
+    position: absolute;
+    margin-top: 35%;
+    margin-left: 8%;
+    font-size: 20px;
+    animation: moveup;
+
+}
+
+button {
+    color: white;
+    position: absolute;
+    margin-top: 40%;
+    margin-left: 8%;
+    font-size: 20px;
+    padding: 15px 30px;
+    background-color: red;
+    border: none;
+    border-radius: 20px 0px 20px 20px;
+    transition: 0.5s;
+    animation: moveup;
+    animation-delay: 0.5s;
+}
+
+button:hover {
+    background-color: white;
+    color: red;
+    border-radius: 20px 20px 20px 20px;
+}
+
+span {
+    color: orange;
+}
+
+.anim {
+    opacity: 0px;
+    transform: translateY(30px);
+    animation: moveup 0.5 linear forwards;
+}
+
+@keyframes moveup {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+
+    }
+} */
+
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: auto;
+}
+
+/* .swiper img {
+    max-width: 10px;
+    width: 100%;
+    background-size: cover;
+} */
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}

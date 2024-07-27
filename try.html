@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        /* accordion  and form*/
+
+
+        .form-section {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2%;
+            gap: 100px;
+            flex-direction: row;
+
+        }
+
+        .form-section .accordion {
+            width: 50%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+
+        .form-h1 {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: clamp(15px, 4vw, 40px);
+            font-weight: bolder;
+            text-align: center;
+            margin-top: 6%;
+        }
+
+
+        .accordionn {
+            width: 50%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            padding-top: 70px;
+        }
+
+        .accordionn .contentbox {
+            gap: 10px;
+            width: 500px;
+            min-width: 200px !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .accordionn .contentbox .label {
+            position: relative;
+            padding: 10px;
+            background: black;
+            border: 2px solid red;
+            color: white;
+            cursor: pointer;
+            background: red;
+
+        }
+
+        .accordionn .contentbox .label::before {
+            content: '+';
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            font-size: 25px;
+        }
+
+        .accordionn .contentbox.active .label::before {
+            content: '-';
+            font-size: 25px;
+        }
+
+        .accordionn .contentbox .content {
+            position: relative;
+            background: white;
+            height: 0;
+            overflow: hidden;
+            transition: 0.5s;
+            overflow-y: auto;
+        }
+
+        .accordionn .contentbox.active .content {
+            height: 65px;
+            width: 490px;
+            padding: 10px 5px;
+            font-size: 20px!important;    
+        }
+
+        /* form */
+
+
+        .form-section .form {
+            width: 50%;
+            height: auto;
+            /* position: relative; */
+        }
+
+        .form-section .form .form-heading {
+            color: white;
+            font-size: 20px;
+            font-family: calibri;
+            text-align: center;
+        }
+
+        .formm {
+            height: 350px;
+            width: 350px;
+            background-color: rgba(17, 13, 13, 0.13);
+            top: 50%;
+            left: 80%;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgba(16, 10, 7, 0.6);
+            padding: 50px 35px;
+        }
+
+        .formm * {
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            outline: none;
+            border: none;
+        }
+
+        .formm .form-heading {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 22px;
+            text-align: center;
+            font-family: calibri;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        #mail,
+        #password {
+            display: block;
+            height: 50px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.07);
+            border-radius: 3px;
+            padding: 0 10px;
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        ::placeholder {
+            color: #e5e5e5;
+        }
+
+        .login-btn {
+            margin-top: 25px;
+            width: 90%;
+            background-color: #ffffff;
+            color: red;
+            border: 2px solid red;
+            padding: 13px 0;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 1s;
+            margin-left: 20px;
+
+        }
+
+        .login-btn:hover {
+            color: white;
+            background-color: red;
+            border-radius: 0px 35px 0px 35px;
+        }
+
+        .social {
+            margin-top: 25px;
+            display: flex;
+            margin-left: 20px;
+        }
+
+        .social div {
+            background: red;
+            width: 150px;
+            border-radius: 3px;
+            padding: 5px 10px 10px 5px;
+            background-color: black;
+            border: 0.5px solid white;
+            color: #eaf0fb;
+            text-align: center;
+            transition: 0.5s;
+        }
+
+        .social div:hover {
+            background-color: red;
+            border-radius: 0px 20px 0px 20px;
+            border: none;
+        }
+
+        .social .fb {
+            margin-left: 25px;
+        }
+
+        .social i {
+            margin-right: 4px;
+        }
+
+
+        /* accordion  and form end*/
+
+
+        @media screen and (max-width:1230px) and (min-width:50px) {
+            .form-section {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                /* flex-direction: column; */
+            }
+
+            .accordion {
+                width: 100% !important;
+            }
+        }
+    </style>
+
+
+    <section>
+        <h1 class="form-h1">JOIN OUR COMMUNITY</h1>
+        <div class="form-section">
+            <div class="accordion">
+                <div class="accordionn">
+                    <div class="contentbox">
+                        <div class="label">Categorize Movies</div>
+                        <div class="content">
+                            <p>Use the accordion to categorize movies by genres, release year, director, actors, or any
+                                other relevant criteria. This allows users to easily navigate and find movies they're
+                                interested in.</p>
+                        </div>
+                    </div>
+                    <div class="contentbox">
+                        <div class="label">Synopsis and Details</div>
+                        <div class="content">
+                            <p>Within each accordion section, provide a brief synopsis or summary of the movie. Include
+                                essential details such as the director, cast, runtime, release date, and ratings.</p>
+                        </div>
+                    </div>
+                    <div class="contentbox">
+                        <div class="label">Image Thumbnails</div>
+                        <div class="content">
+                            <p>Incorporate thumbnails or movie posters into the accordion to make it visually appealing.
+                                Images often attract users' attention and help them identify movies quickly.</p>
+                        </div>
+                    </div>
+                    <div class="contentbox">
+                        <div class="label">Interactive Elements</div>
+                        <div class="content">
+                            <p>Consider adding interactive elements within the accordion, such as trailers, links to
+                                reviews, or related articles for further information.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="formm">
+                <div class="background">
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                </div>
+                <form onsubmit="return checking()" style="margin-top:20px ;">
+                    <h4 class="form-heading"> LOGIN</h4>
+                    <div id="error"></div>
+
+                    <span id="mail-error"></span>
+                    <label for="username" style="margin-top:10px ;">Email</label>
+                    <input type="email" placeholder="Email" id="mail" onkeyup="mailValidation()">
+                    <span id="mail-success"></span>
+
+                    <span id="password-error"></span>
+                    <label for="password" style="margin-top:30px ;">Password</label>
+                    <input type="password" placeholder="Password" id="password" onkeyup="passwordValidation()">
+                    <span id="password-success"></span>
+
+                    <input type="submit" style="margin-top:30px ;" class="login-btn">
+                    <span id="submit-error"></span>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+<!-- 
+    <style>
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 80%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .active,
+        .accordion:hover {
+            background-color: #ccc;
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+            width: 76%;
+        }
+    </style>
+    <div class="acc">
+        <button class="accordion">Section 1</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion">Section 2</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion">Section 3</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commodo consequat.</p>
+        </div>
+    </div> -->
+
+    <script>
+      //accordion
+
+      const accordion = document.getElementsByClassName("contentbox");
+        let currentOpenTab = null;
+
+        for (let i = 0; i < accordion.length; i++) {
+            accordion[i].addEventListener('click', function () {
+                if (currentOpenTab && currentOpenTab !== this) {
+                    currentOpenTab.classList.remove('active'); // Close the previously open tab
+                }
+
+                this.classList.toggle('active'); // Toggle the current tab
+                currentOpenTab = this; // Update the stored open tab
+            });
+        }
+
+        //accordion end
+        </script>
+</body>
+
+</html>

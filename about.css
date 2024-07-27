@@ -1,0 +1,451 @@
+@font-face {
+    font-family: font;
+    src: url('./font/Sensations\ and\ Qualities.ttf');
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    /* padding: 30px; */
+    background-color: black;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+nav {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+nav .logo {
+    width: 30%;
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    font-weight: bolder;
+    text-align: center;
+}
+
+nav ul {
+    width: 65%;
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    padding: 5px;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: clamp(8px, 3vw, 20px);
+    /* font-size:clamp(50px,4vw,80px); */
+    text-decoration: none;
+}
+
+
+nav ul li a:hover {
+    color: red;
+}
+
+
+#ham-icon {
+    font-size: 28px;
+    display: none;
+}
+
+nav input {
+    display: none;
+}
+
+#useri {
+    display: none;
+}
+
+#usern {
+    display: block;
+}
+
+
+
+/* banner */
+
+
+.container-fluid {
+    background-image: url('https://wallpaper-house.com/data/out/12/wallpaper2you_524185.jpg');
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    border-image: fill 0 linear-gradient(#0001, #000);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: clamp(50px, 4vw, 80px);
+    /* display: flex; */
+    justify-content: center;
+    flex-direction: column;
+    /* font-family: font; */
+
+}
+
+/* banner end */
+
+
+/* about */
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.aside {
+    width: 50%;
+    height: auto;
+
+}
+
+.right-side {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right-side img{
+    width: 80%;
+}
+.aside h1 {
+    font-family: font;
+    font-size: 100px;
+}
+
+
+.library {
+    font-family: font;
+    font-size: 100px;
+}
+
+.btn1 {
+    padding: 8px 25px;
+    color: red;
+    background-color: white;
+    border: 2px solid red;
+    font-weight: bold;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.btn1:hover {
+    background-color: red;
+    color: white;
+    border-radius: 0px;
+    transform: skew(-20deg, 0deg);
+}
+
+/* about end */
+
+
+
+/* card-container */
+.c-head {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80%;
+    margin-left: 5.5%;
+}
+
+
+.card-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.card-container .card {
+    background-color: none !important;
+    display: block!important;
+}
+.card-container .card:hover{
+    box-shadow: 0px 0px 100px solid red;
+}
+
+.card-container .card .card-title {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.show-btn{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.btn1 {
+    padding: 8px 25px;
+    color: red;
+    background-color: white;
+    border: 2px solid red;
+    font-weight: bold;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.btn1:hover {
+    background-color: red;
+    color: white;
+    border-radius: 0px;
+    transform: skew(-20deg, 0deg);
+}
+
+.btn2{
+    background-color: #222028;
+    border: 2px solid #222028;
+    padding: 2px;
+    border-radius: 5px;
+    color:white
+}
+.btn2:hover{
+    border: 2px solid red;
+}
+/* card-container end */
+
+
+
+/* footer */
+
+.footer {
+    margin-top: 6%;
+    width: 100%;
+    color: white;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3.5rem;
+    padding: 60px;
+}
+
+.footer-row .footer-col h4 {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.footer-col .links {
+    margin-top: 20px;
+}
+
+.footer-col .links li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.footer-col .links li a {
+    text-decoration: none;
+    color: #bfbfbf;
+}
+
+.footer-col .links li a:hover {
+    color: #fff;
+}
+
+.footer-col p {
+    margin: 20px 0;
+    color: #bfbfbf;
+    max-width: 300px;
+}
+
+.footer-col form {
+    display: flex;
+    gap: 5px;
+}
+
+.footer-col input {
+    height: 40px;
+    border-radius: 6px;
+    background: none;
+    width: 100%;
+    outline: none;
+    border: 2px solid #7489C6;
+    caret-color: #fff;
+    color: #fff;
+    padding-left: 10px;
+}
+
+.footer-col input::placeholder {
+    color: #ccc;
+}
+
+.footer-col form button {
+    background: white;
+    color: red;
+    border: 2px solid red;
+    outline: none;
+    /* border: none; */
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.footer-col form button:hover {
+    background: red;
+    color: white;
+
+}
+
+.footer-col .icons {
+    display: flex;
+    margin-top: 30px;
+    gap: 30px;
+    cursor: pointer;
+}
+
+.footer-col .icons i {
+    color: #afb6c7;
+}
+
+.footer-col .icons i:hover {
+    color: #fff;
+}
+
+#useri {
+    display: none;
+}
+
+/* footerend */
+
+@media (max-width:1440px) {
+    .img {
+        width: 80%;
+    }
+}
+
+@media (max-width:1024px) {
+    .img {
+        width: 100%;
+    }
+
+    .con3 {
+        /* flex-direction: row; */
+        flex-wrap: wrap;
+    }
+
+    .con3 {
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+    }
+
+    .con4 {
+        flex-direction: row;
+    }
+}
+
+
+@media (max-width:768px) {
+
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+    #useri {
+        display: block;
+    }
+
+    #usern {
+        display: none;
+    }
+
+    nav .logo {
+        z-index: 2;
+    }
+
+    nav #ham-icon {
+        display: block;
+        order: 3;
+        color: red;
+        z-index: 2;
+    }
+
+    nav ul {
+        width: 100%;
+        position: absolute;
+        background-color: rgb(20, 20, 20);
+        height: 350px;
+        margin: 0 !important;
+        padding: 20px 0px;
+        top: -150%;
+        flex-direction: column;
+        gap: 2px;
+        transition-duration: 1s;
+        z-index: 1;
+        color: red;
+    }
+
+    nav ul li {
+        height: 100px;
+        width: 100%;
+        display: grid;
+        justify-content: center;
+    }
+
+    #check-btn:checked~ul {
+        top: 65px;
+    }
+
+    .container {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .aside {
+        width: 100%;
+    }
+
+    .right-side {
+        width: 100%;
+    }
+
+    .cont {
+        flex-direction: column-reverse;
+    }
+
+    .cont2 {
+        flex-direction: column-reverse;
+    }
+
+    .img {
+        width: 100%;
+    }
+
+}
